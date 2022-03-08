@@ -3,7 +3,7 @@
 if ($method == 'POST') {
     if ($_POST !== null) {
 
-        include('./functions/auth/register/checkUserExist.php');
+        include('./utils/auth/register/checkUserExist.php');
 
         DB::query("INSERT INTO users (user_name, first_name, last_name, email, mobile, password, gender, avatar) VALUES(:user_name, :first_name, :last_name, :email, :mobile, :password, :gender, :avatar)", [
             ':user_name' => $_POST['user_name'],
