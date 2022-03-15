@@ -5,7 +5,7 @@ header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods,Authorization, X-Requested-With');
 
 // define varables
-$tables = ['bills', 'consumers', 'groups', 'group_user', 'roles', 'role_user', 'tokens'];
+$tables = ['bills', 'consumers', 'groups', 'group_user', 'roles', 'role_user', 'tokens', 'user'];
 $id = null;
 $queryStr = null;
 $method = $_SERVER['REQUEST_METHOD'];
