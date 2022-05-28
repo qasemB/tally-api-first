@@ -15,7 +15,7 @@ if ($method == 'POST') {
             $authModeValue = $_POST['mobile'];
         }elseif(isset($_POST['email'])){
             $authMode = "email";
-            $authModeValue = $_POST['email'];  
+            $authModeValue = $_POST['email'];
         }else{
             echo json_encode([
                 'message' => 'ایمیل یا موبایل به درستی وارد نشده است',
@@ -57,9 +57,9 @@ if ($method == 'POST') {
                     DB::query("INSERT INTO tokens (user_id, token, exp) VALUES(:user_id, :token, :exp)", [
                         ':user_id' => $user['id'],
                         ':token' => $jwt,
-                        ':exp' => $exp                    
+                        ':exp' => $exp
                     ]);
-        
+
                     echo json_encode([
                         'success'=> true,
                         'token' => $jwt,
@@ -75,7 +75,7 @@ if ($method == 'POST') {
             }
         }
 
-        
+
     }else{
         echo json_encode([
             'message' => 'please pill in all the credentials',
@@ -83,7 +83,7 @@ if ($method == 'POST') {
         ]);
     }
 
-    
+
 } else{
     http_response_code(405);
 }

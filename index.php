@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT');
-header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods,Authorization, X-Requested-With');
+header('Access-Control-Allow-Headers: Accept, Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods,Authorization, X-Requested-With');
 
 // define varables
 $tables = ['bills', 'consumers', 'groups', 'group_user', 'roles', 'role_user', 'tokens', 'user'];
